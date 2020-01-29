@@ -1,5 +1,5 @@
 import numpy as np
-import img_utils as iu
+from . import img_utils as iu
 import math
 import os
 import argparse

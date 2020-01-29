@@ -12,10 +12,7 @@ setup(
     packages=['athentoimaging'],
     install_requires=[
         'argparse',
-        'numpy',
-        'os',
-        'math',
-        'time'
+        'numpy'
     ],
     include_package_data=True,
     license='Athento Shared Source License',

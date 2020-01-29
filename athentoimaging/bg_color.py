@@ -1,6 +1,6 @@
 import cv2 as cv
-import threshold as th
-import img_utils as iu
+from . import threshold as th
+from . import img_utils as iu
 import numpy as np
 import argparse
 import os

@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 import argparse
-import img_utils as iu
+from . import img_utils as iu
 
 """
 This script performs a fast template matching algorithm using the OpenCV
@@ -100,7 +100,7 @@ def ftm_pyramid(input_file, template_file, max_level=5):
 
     tm_results = temp_match(image, template, max_level)
 
-    print len(tm_results)
+    print(len(tm_results))
 
     for r in tm_results:
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(r)
