@@ -103,19 +103,19 @@ def save_img(image, output_name, question):
         raise ValueError("The output name can't be a None object.")
 
     #REPLACE THE NEXT FEW LINES TO CHANGE THE INPUT SYSTEM
-    ans = input(question)
+    ans = eval(input(question))
 
     # Checks that the input is within the correct values
     ans_list = ["y", "yes", "n", "no", "Y", "YES", "N", "NO"]
     while ans not in ans_list:
-        ans = input(question)
+        ans = eval(input(question))
 
     #END CHANGES
 
     # Saving the image
     if ans[0] == 'y' or ans[0] == 'Y':
-        print "Saving..."
+        print("Saving...")
         cv.imwrite(output_name, image)
-        print "Saved as {0}.".format(output_name)
+        print("Saved as {0}.".format(output_name))
 
     return 0

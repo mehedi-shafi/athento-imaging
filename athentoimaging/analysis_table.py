@@ -1,6 +1,6 @@
-import area_analysis as aa
-import contours as cc
-import img_utils as iu
+from . import area_analysis as aa
+from . import contours as cc
+from . import img_utils as iu
 import numpy as np
 import argparse
 import time
@@ -82,13 +82,13 @@ def show_table(table, types):
     first_line = "File, Type, Contour dimension, Document area, # of blocks, " \
                  "Model, # of corners"
 
-    print first_line
+    print(first_line)
 
     for n, i in enumerate(table):
         line = str(i[0]) + "," + types[n] + "," + str(i[1]) + "," + \
                str(i[2]) + "," + str(i[3]) + "," + str(i[4]) + "," + \
                str(i[5])
-        print line
+        print(line)
 
     return 0
 
@@ -104,6 +104,6 @@ if __name__ == '__main__':
 
     show_table(analyze_all(files), types)
 
-    print "{0} files analyzed in {1} seconds".format(len(files),
+    print("{0} files analyzed in {1} seconds".format(len(files),
                                                      round(time.time() -
-                                                           start, 3))
+                                                           start, 3)))

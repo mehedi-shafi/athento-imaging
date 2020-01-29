@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
-import img_utils as iu
-import threshold as th
+from . import img_utils as iu
+from . import threshold as th
 import math
 import os
 
@@ -45,8 +45,8 @@ def contours_close(cnt1, cnt2, min_dist=20):
 
     result = False
 
-    for i in xrange(cnt1.shape[0]):
-        for j in xrange(cnt2.shape[0]):
+    for i in range(cnt1.shape[0]):
+        for j in range(cnt2.shape[0]):
             dist = np.linalg.norm(cnt1[i] - cnt2[j])
             if abs(dist) <= min_dist:
                 result = True
@@ -636,7 +636,7 @@ def join_contours(contours, min_dist=20):
                     status[x] = i+1
         unified = []
         maximum = int(status.max())+1
-        for j in xrange(maximum):
+        for j in range(maximum):
             pos = np.where(status == j)[0]
             if pos.size != 0:
                 cont = np.vstack(contours[j] for j in pos)

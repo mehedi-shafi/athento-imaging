@@ -1,4 +1,10 @@
-
+athentoimaging.egg-info
 *.pyc
 
 .idea/*
+
+build/
+
+dist/
+
+athento

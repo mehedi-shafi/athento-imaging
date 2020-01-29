@@ -1,6 +1,6 @@
 import cv2 as cv
 import numpy as np
-import img_utils as iu
+from . import img_utils as iu
 import os
 
 
@@ -625,7 +625,7 @@ def check_line(line, probabilistic=False):
         raise ValueError("Line must be a line, is None.")
 
     if np.size(line) != line_size:
-        print line
+        print(line)
         #raise ValueError("Wrong format on line, line must be [rho, theta] or [x1, x2, y1, y2] if probabilistic.")
     return 0
 

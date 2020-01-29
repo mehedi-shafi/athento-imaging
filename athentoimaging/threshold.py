@@ -1,5 +1,5 @@
 import cv2 as cv
-import img_utils as iu
+from . import img_utils as iu
 import numpy as np
 import argparse
 import os
